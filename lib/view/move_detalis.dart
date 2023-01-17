@@ -95,28 +95,28 @@ class _MovesDetalisState extends State<MovesDetalis> {
                                 size: 30,
                                 color: Colors.white,
                               )),
-                          IconButton(
-                              onPressed: () {},
-                              icon: Icon(
-                                Icons.favorite_rounded,
-                                size: 30,
-                                color: Colors.red,
-                              )),
+                          // IconButton(
+                          //     onPressed: () {},
+                          //     icon: Icon(
+                          //       Icons.favorite_rounded,
+                          //       size: 30,
+                          //       color: Colors.red,
+                          //     )),
                         ],
                       ),
                     Spacer(),
-                    cubit.move?.originalTitle!=null?
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Text(
-                            '${cubit.move?.originalTitle}',
-                            style: TextStyle(fontSize: 27, color: Colors.white,
-                            fontFamily: 'Mont',
+                    // cubit.move?.originalTitle!=null?
+                    //   Padding(
+                    //     padding: const EdgeInsets.all(10.0),
+                    //     child: Text(
+                    //         '${cubit.move?.originalTitle}',
+                    //         style: TextStyle(fontSize: 27, color: Colors.white,
+                    //         fontFamily: 'Mont',
                             
                 
-                            ),
-                          ),
-                      ):CircularProgressIndicator(),
+                    //         ),
+                    //       ),
+                    //   ):CircularProgressIndicator(),
                     ],
                   )
                 ):CircularProgressIndicator(),

@@ -93,7 +93,9 @@ return Scaffold(
     ),
     items: element.map((i) {
       return Builder(builder: (BuildContext context) {
-        return slider.Slider(image:"https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.resultsUpComing[i].posterPath}");
+        return slider.Slider(image:"https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.resultsUpComing[i].posterPath}",
+        id: cubit.resultsUpComing[i].id,
+        );
       });
     }).toList(),
   )),
@@ -110,9 +112,9 @@ return Scaffold(
                 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
+                  children: const[
                     Padding(
-                      padding: const EdgeInsets.only(left: 10, bottom: 5,top: 1),
+                      padding: EdgeInsets.only(left: 10, bottom: 5,top: 1),
                       child: Text(
                         'Upcoming',
                         // 'Upcoming ',
@@ -132,8 +134,10 @@ return Scaffold(
                     physics: BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
+                      
                       return Coming(
                         image: "https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.resultsUpComing[index].posterPath}",
+                         id: cubit.resultsUpComing[index].id,
                         // name:cubit.resultsUpComing[index].title ,
                       );
                     },
@@ -216,27 +220,7 @@ return Scaffold(
                           ]),
                   ),
                   body: TabBarView(children: [
-//                     Container(
-//                             height: 20.h,
-//                             // width: 120.w,
-//                             color: Color(0xff1D3153),
-//                             child: ListView.builder(
-//                               padding: EdgeInsets.zero,
-//                               shrinkWrap: true,
-//                               physics: BouncingScrollPhysics(),
-//                               scrollDirection: Axis.horizontal,
-//                               itemBuilder: (context, index) {
-//                                 // return UpComing(
-// //  image: upcoming[index].image,
-//                                 // );
-//                                 return Coming(
-//                                   image: "https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.results[index].posterPath}",
-//                                   // name: cubit.results[index].title,
-//                                 );
-//                               },
-//                               itemCount:cubit.results.length,
-//                             ),
-//                           ),
+//                   
   Container(
                             height: 20.h,
                             // width: 120.w,
@@ -253,7 +237,7 @@ return Scaffold(
                                 return Coming(
                                   image: "https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.resultsAction[index].posterPath}",
                                   id: cubit.resultsAction[index].id,
-                                  // name: cubit.results[index].title,
+                                  
                                 );
                               },
                               itemCount:cubit.resultsAction.length,
@@ -269,8 +253,10 @@ return Scaffold(
                               physics: BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
-                                return UpComing(
+                                return Coming(
                                   image:"https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.resultsDrama[index].posterPath}",
+                                  id: cubit.resultsDrama[index].id,
+
                                 );
                               },
                               itemCount: cubit.resultsDrama.length,
@@ -286,8 +272,9 @@ return Scaffold(
                               physics: BouncingScrollPhysics(),
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
-                                return UpComing(
+                                return Coming(
                                   image: "https://image.tmdb.org/t/p/w220_and_h330_face/${cubit.resultsHorror[index].posterPath}",
+                                  id: cubit.resultsHorror[index].id,
                                 );
                               },
                               itemCount: cubit.resultsHorror.length,
@@ -297,200 +284,7 @@ return Scaffold(
                   ]),
                 )),
                         )
-          ,
-          ////////////////////////////////////////
-          //               Container(
-          //                 height: 30.h,
-          //                 color: Color(0xff1D3153),
-          //                 // color: Colors.amber,
-          //                 // width: 10.w,
-          //                 child: DefaultTabController(
-          //                 length: 4,
-                  
-                  
-          //                 child: Scaffold(
-          //                   body: Column(
-          //                     children: <Widget>[
-                     
-          //                        Material(
-          //                         color:  Color(0xff1D3153),
-          //                         // borderOnForeground: false,
-          //                         // elevation: 1,
-          //                         // shape:ShapeBorder.lerp(a, b, t) ,
-          //                         // borderRadius: ,
-          //                         child: TabBar(
-          //                           indicatorColor:  Color(0xff1D3153),
-          //                 unselectedLabelColor: Colors.redAccent,
-          //                 indicatorSize: TabBarIndicatorSize.label,
-          //                 indicator: BoxDecoration(
-          //                     borderRadius: BorderRadius.circular(50),
-                      
-          //                     color: Colors.redAccent),
-          //                 tabs: [
-          //                   Tab(
-          //                     child: Container(
-          //                       decoration: BoxDecoration(
-          //                           borderRadius: BorderRadius.circular(50),
-          //                           border: Border.all(color: Colors.redAccent, width: 1)),
-          //                       child: Align(
-          //                         alignment: Alignment.center,
-          //                         child: Text("APPS"),
-          //                       ),
-          //                     ),
-          //                   ),
-          //                   Tab(
-          //                     child: Container(
-          //                       decoration: BoxDecoration(
-          //                           borderRadius: BorderRadius.circular(50),
-          //                           border: Border.all(color: Colors.redAccent, width: 1)),
-          //                       child: Align(
-          //                         alignment: Alignment.center,
-          //                         child: Text("MOVIES"),
-          //                       ),
-          //                     ),
-          //                   ),
-          //                   Tab(
-          //                     child: Container(
-          //                       decoration: BoxDecoration(
-          //                           borderRadius: BorderRadius.circular(50),
-          //                           border: Border.all(color: Colors.redAccent, width: 1)),
-          //                       child: Align(
-          //                         alignment: Alignment.center,
-          //                         child: Text("GAMES"),
-          //                       ),
-          //                     ),
-          //                   ),
-                    
-          //                   Tab(
-          //                     child: Container(
-          //                       decoration: BoxDecoration(
-          //                           borderRadius: BorderRadius.circular(50),
-          //                           border: Border.all(color: Colors.redAccent, width: 1)),
-          //                       child: Align(
-          //                         alignment: Alignment.center,
-          //                         child: Text("GAMES"),
-          //                       ),
-          //                     ),
-          //                   ),
-          //                 ]),
-                  
-          //                                            ),
-          //                       // cubit.proudcts.length > 0
-          //                       //     ? 
-          //                           Expanded(
-          //                               child: TabBarView(
-          //                               physics: const NeverScrollableScrollPhysics(),
-          //                               children: [
-          //                                 // first tab bar view widget
-          //                                 ///////////////////////////0
-          //                                 ///
-          //                                 ////////////////////4
-          //                                Container(
-          //                   height: 20.h,
-          //                   // width: 120.w,
-          //                   color: Color(0xff1D3153),
-          //                   child: ListView.builder(
-          //                     padding: EdgeInsets.zero,
-          //                     shrinkWrap: true,
-          //                     physics: BouncingScrollPhysics(),
-          //                     scrollDirection: Axis.horizontal,
-          //                     itemBuilder: (context, index) {
-          //                       return UpComing(
-          //                         image: upcoming[index].image,
-          //                       );
-          //                     },
-          //                     itemCount: upcoming.length,
-          //                   ),
-          //                 ),
-          //                                Container(
-          //                   height: 32.h,
-          //                   color: Color(0xff1D3153),
-          
-          //                   // width: 120.w,
-          //                   child: ListView.builder(
-          //                     padding: EdgeInsets.zero,
-          //                     shrinkWrap: true,
-          //                     physics: BouncingScrollPhysics(),
-          //                     scrollDirection: Axis.horizontal,
-          //                     itemBuilder: (context, index) {
-          //                       return UpComing(
-          //                         image: upcoming[index].image,
-          //                       );
-          //                     },
-          //                     itemCount: upcoming.length,
-          //                   ),
-          //                 ),
-                                 
-                                 
-          // /////////////////////
-          //                                 Container(
-          //                   height: 32.h,
-          //                   // width: 120.w,
-          //                   color: Color(0xff1D3153),
-          
-          //                   child: ListView.builder(
-          //                     padding: EdgeInsets.zero,
-          //                     shrinkWrap: true,
-          //                     physics: BouncingScrollPhysics(),
-          //                     scrollDirection: Axis.horizontal,
-          //                     itemBuilder: (context, index) {
-          //                       return UpComing(
-          //                         image: upcoming[index].image,
-          //                       );
-          //                     },
-          //                     itemCount: upcoming.length,
-          //                   ),
-          //                 ),
-          //                  Container(
-          //                   height: 32.h,
-          //                   // width: 120.w,
-          //                   color: Color(0xff1D3153),
-          
-          //                   child: ListView.builder(
-          //                     padding: EdgeInsets.zero,
-          //                     shrinkWrap: true,
-          //                     physics: BouncingScrollPhysics(),
-          //                     scrollDirection: Axis.horizontal,
-          //                     itemBuilder: (context, index) {
-          //                       return UpComing(
-          //                         image: upcoming[index].image,
-          //                       );
-          //                     },
-          //                     itemCount: upcoming.length,
-          //                   ),
-          //                 ),
-          //                                 //  GridView.count(
-          //                                 //   shrinkWrap: true,
-          //                                 //   physics: const BouncingScrollPhysics(),
-          //                                 //   crossAxisCount: 2,
-          //                                 //   mainAxisSpacing: 4,
-          //                                 //   crossAxisSpacing: 2,
-          //                                 //   childAspectRatio: 1 / 1.3,
-          //                                 //   children: List.generate(
-          //                                 //     // cubit.tool.length.bitLength,
-          //                                 //     3,
-          //                                 //     (index) =>
-          //                                 //         cardTools(model:cubit.tool[index] ),
-          //                                 //   ),
-          //                                 // ),
-          
-                                
-          //                               ],
-          //                             )
-          //                             )
-          //                           // : Center(child: CircularProgressIndicator()),
-          //                     ],
-          //                   ),
-          //                 ),
-          //             ),
-          //               ),
-            
-                
-                // Container(
-                //   height: 300,
-                //   width: 300,
-                //   color: Colors.amber,
-                // ),
+       
               ],
             ),
           ),

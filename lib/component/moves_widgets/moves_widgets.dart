@@ -12,26 +12,11 @@ class MovesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => ItemDetails(
-        //       itemname: item.name,
-        //       itemfavorite: item.favorite,
-        //       itemimage: item.image,
-        //       itemprice: item.price,
-        //     ),
-        //   ),
-        // );
       },
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child:
-            // isloading
-            //     ? SpinKitFadingCircle(
-            //         color: Color(0xffFF4500),
-            //       )
-            //     :
+  
             Column(
               children: [
                 Container(
@@ -84,23 +69,10 @@ class CastWidget extends StatelessWidget {
                   ),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-              //   child:  Column(
-              //     mainAxisAlignment: MainAxisAlignment.start,
-              //     children: [
-              //       Row(
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         children: [
-              //       IconButton(onPressed: () {
-                
-              // }, icon: Icon(Icons.favorite_rounded,size: 30,color: Colors.red,)),
-              // ],),
-              //     ],
-              //   ),
+              
               ),
         ),
-    //         SizedBox(
-    // height: 1.h,
-    //         ),
+    
          Row(
      children: [
      Text(
@@ -115,32 +87,21 @@ class CastWidget extends StatelessWidget {
      ),
       ],
     );
-
-
 }
 
 }
-
 
 class Slider extends StatelessWidget {
-  const Slider({super.key,this.image});
+  const Slider({super.key,this.image,this.id});
  final String? image;
+ final int? id;
   @override
   Widget build(BuildContext context) {
     return 
     GestureDetector(
       onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => ItemDetails(
-        //       itemname: item.name,
-        //       itemfavorite: item.favorite,
-        //       itemimage: item.image,
-        //       itemprice: item.price,
-        //     ),
-        //   ),
-        // );
+         Navigator.push(context, MaterialPageRoute(builder: (context) => MovesDetalis(id: id,)));
+       
       },
       child: Column(
         children: [
@@ -189,42 +150,7 @@ class Slider extends StatelessWidget {
                      
                     ],
                   ),
-          // Padding(
-          //   padding: const EdgeInsets.all(4.0),
-          //   child:
-          //       // isloading
-          //       //     ? SpinKitFadingCircle(
-          //       //         color: Color(0xffFF4500),
-          //       //       )
-          //       //     :
-          //       Container(
-          //         height: 25.h,
-          //         width: 36.w,
-          //         // height: 250,
-          //         // width: 150,
-          //         decoration: BoxDecoration(
-          //           image: DecorationImage(
-          //             image:NetworkImage(image!),
-          //                 // AssetImage('assets/image/Background.png'),
-          //             fit: BoxFit.fill,
-          //           ),
-          //           borderRadius: BorderRadius.circular(20.0),
-          //         ),
-          //         child:  Column(
-          //           mainAxisAlignment: MainAxisAlignment.start,
-          //           children: [
-          //             Row(
-          //               mainAxisAlignment: MainAxisAlignment.end,
-          //               children: [
-          //             IconButton(onPressed: () {
-                  
-          //       }, icon: Icon(Icons.favorite_rounded,size: 30,color: Colors.red,)),
-          //       ],),
-          //           ],
-          //         ),
-          //       ),
-          // ),
-    
+          
     );
   }
 }
@@ -297,101 +223,8 @@ class Coming extends StatelessWidget {
     
   }
 }
-class UpComing extends StatelessWidget {
-  const UpComing({super.key,this.image,this.name});
- final String? image;
- final String? name;
 
-  @override
-  Widget build(BuildContext context) {
-    return  GestureDetector(
-      onTap: () {
-        // Navigator.push(
-        //   context,
-        //   MaterialPageRoute(
-        //     builder: (context) => ItemDetails(
-        //       itemname: item.name,
-        //       itemfavorite: item.favorite,
-        //       itemimage: item.image,
-        //       itemprice: item.price,
-        //     ),
-        //   ),
-        // );
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(4.0),
-        child:
-            // isloading
-            //     ? SpinKitFadingCircle(
-            //         color: Color(0xffFF4500),
-            //       )
-            //     :
-            Container(
-              height: 20.h,
-              width: 36.w,
-              // height: 250,
-              // width: 150,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image:NetworkImage(image!),
-                      // AssetImage('assets/image/Background.png'),
-                  fit: BoxFit.fill,
-                ),
-                borderRadius: BorderRadius.circular(20.0),
-              ),
-              child:  Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  //  Text(
-                  //                              name!,
-                  //                     // 'GAREDNIA PLANT',
-                  //                     style: TextStyle(
-                  //                       // fontFamily: 'Lobster-Regular',
-                  //                       fontWeight: FontWeight.w100,
-                  //                       fontSize: 14,
-                  //                       color: Colors.black,
-                  //                     ),
-                  //                   ),
-            //       Row(
-            //         mainAxisAlignment: MainAxisAlignment.end,
-            //         children: [
-            //       IconButton(onPressed: () {
-              
-            // }, icon: Icon(Icons.favorite_rounded,size: 30,color: Colors.red,)),
-            // ],),
-                ],
-              ),
-            ),
-      )
-    );
-      
-    
-  }
-}
 
-// class SliderImage extends StatefulWidget {
-//   const SliderImage({super.key,this.article});
-//  final List<dynamic>? article;
-
- 
-
-//   @override
-//   State<SliderImage> createState() => _SliderImageState();
-// }
-
-// class _SliderImageState extends State<SliderImage> {
- 
-
-//   @override
-//   void initState() {
-   
-//     super.initState();
-//   }
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container();
-//   }
-// }
 
 
 Widget buildImageSlider({BuildContext ?context, List<dynamic> ?article,}) {
@@ -419,225 +252,3 @@ Widget buildImageSlider({BuildContext ?context, List<dynamic> ?article,}) {
   ));
 }
 
-// Widget cardPlant({PlantsData ? model,BuildContext? context}){
-//   return GestureDetector(
-//       onTap: () {
-//         // Navigator.push(
-//         //   context,
-//         //   MaterialPageRoute(
-//         //     builder: (context) => ItemDetails(
-//         //       itemname: item.name,
-//         //       itemfavorite: item.favorite,
-//         //       itemimage: item.image,
-//         //       itemprice: item.price,
-//         //     ),
-//         //   ),
-//         // );
-//       },
-//       child: Padding(
-//         padding: const EdgeInsets.all(4.0),
-//         child:
-//             // isloading
-//             //     ? SpinKitFadingCircle(
-//             //         color: Color(0xffFF4500),
-//             //       )
-//             //     :
-//             Container(
-//           // height: displayHeight(context!) * 76,
-
-//           // width: displayWidth(context) * .9,
-//           height: 250,
-//           width: 200,
-
-//           decoration: BoxDecoration(
-//             color: Colors.white,
-//             boxShadow: [
-//               BoxShadow(
-//                 color: Colors.black12,
-//                 spreadRadius: 1,
-//                 blurRadius: 4,
-//                 offset: Offset(0, 5), // changes position of shadow
-//               ),
-//             ],
-//             borderRadius: BorderRadius.circular(15.0),
-//           ),
-//           child: Material(
-//             type: MaterialType.transparency,
-//             child: Expanded(
-//               child: Stack(
-//                 children: [
-//                   Padding(
-//                     padding: const EdgeInsets.only(
-//                         top: 1, bottom: 10, left: 15, right: 10),
-//                     child: Row(
-//                       mainAxisAlignment: MainAxisAlignment.start,
-//                       children: [
-//  model!.imageUrl==''?
-//              Container(
-//                           height: 140.0,
-//                           width: 70.0,
-//                           decoration: BoxDecoration(
-//                             image: DecorationImage(
-//                               image: AssetImage('assets/image/Background.png'),
-                                
-//                               fit: BoxFit.cover,
-//                             ),
-//                             borderRadius: BorderRadius.circular(20.0),
-//                           ),
-//                         ):
-//                         Container(
-//                           height: 140.0,
-//                           width: 70.0,
-//                           decoration: BoxDecoration(
-//                             image: DecorationImage(
-//                               image:NetworkImage("https://lavie.orangedigitalcenteregypt.com${model.imageUrl}"),
-//                                   // AssetImage('assets/image/Background.png'),
-//                               fit: BoxFit.cover,
-//                             ),
-//                             borderRadius: BorderRadius.circular(20.0),
-//                           ),
-//                         ),
-
-//                         //  Row(
-//                         //   mainAxisAlignment: MainAxisAlignment.center,
-//                         //   children: [
-//                         //     ButtonShop(
-//                         //       icon: Icons.remove,
-//                         //       onPressed: () {
-//                         //         // setState(() {
-//                         //         //   numerOfItem--;
-//                         //         // });
-//                         //       },
-//                         //     ),
-//                         //     Text(
-//                         //       // numerOfItem.toString().padLeft(1, '0'),
-//                         //       '1',
-//                         //       style: TextStyle(
-//                         //         fontSize: 20,
-//                         //       ),
-//                         //     ),
-//                         //     ButtonShop(
-//                         //       icon: Icons.add,
-//                         //       onPressed: () {
-//                         //         // setState(() {
-//                         //         //   numerOfItem++;
-//                         //         // });
-//                         //       },
-//                         //     )
-//                         //   ],
-//                         // ),
-//                         // Container(
-//                         //   height: 140.0,
-//                         //   width: 70.0,
-//                         //   decoration: BoxDecoration(
-//                         //     image: DecorationImage(
-//                         //       image:NetworkImage("https://lavie.orangedigitalcenteregypt.com${widget.model!.imageUrl}"),
-//                         //           // AssetImage('assets/image/Background.png'),
-//                         //       fit: BoxFit.cover,
-//                         //     ),
-//                         //     borderRadius: BorderRadius.circular(20.0),
-//                         //   ),
-//                         // ),
-//                         // Row(
-//                         //   mainAxisAlignment: MainAxisAlignment.center,
-//                         //   children: [
-//                         //     ButtonShop(
-//                         //       icon: Icons.remove,
-//                         //       onPressed: () {
-//                         //         setState(() {
-//                         //           numerOfItem--;
-//                         //         });
-//                         //       },
-//                         //     ),
-//                         //     Text(
-//                         //       numerOfItem.toString().padLeft(1, '0'),
-//                         //       style: TextStyle(
-//                         //         fontSize: 20,
-//                         //       ),
-//                         //     ),
-//                         //     ButtonShop(
-//                         //       icon: Icons.add,
-//                         //       onPressed: () {
-//                         //         setState(() {
-//                         //           numerOfItem++;
-//                         //         });
-//                         //       },
-//                         //     )
-//                         //   ],
-//                         // ),
-//                       ],
-//                     ),
-//                   ),
-//                   // Padding(
-//                   //   padding: const EdgeInsets.only(top: 80),
-//                   //   child: Align(
-//                   //     alignment: Alignment.bottomRight,
-//                   //     child: Column(
-//                   //       mainAxisAlignment: MainAxisAlignment.end,
-//                   //       children: [
-//                   //         //
-//                   //         Column(
-//                   //           mainAxisAlignment: MainAxisAlignment.start,
-//                   //           children: [
-//                   //             Row(
-//                   //               mainAxisAlignment: MainAxisAlignment.start,
-//                   //               children: [
-//                   //                 Padding(
-//                   //                   padding: const EdgeInsets.only(
-//                   //                     left: 5,
-//                   //                     right: 5,
-//                   //                     top: 55,
-//                   //                   ),
-//                   //                   child: Text(
-//                   //                              '${model.name}',
-//                   //                     // 'GAREDNIA PLANT',
-//                   //                     style: TextStyle(
-//                   //                       // fontFamily: 'Lobster-Regular',
-//                   //                       fontWeight: FontWeight.bold,
-//                   //                       fontSize: 14,
-//                   //                       color: Colors.black,
-//                   //                     ),
-//                   //                   ),
-//                   //                 ),
-//                   //               ],
-//                   //             ),
-//                   //             // Row(
-//                   //             //   mainAxisAlignment: MainAxisAlignment.start,
-//                   //             //   children: [
-//                   //             //     Padding(
-//                   //             //       padding: const EdgeInsets.only(
-//                   //             //           left: 5, right: 5),
-//                   //             //       child: Text(
-//                   //             //     '${model.temperature}',
-//                   //             //         // '70 EGP',
-//                   //             //         style: TextStyle(
-//                   //             //           // fontFamily: 'Lobster-Regular',
-//                   //             //           fontWeight: FontWeight.bold,
-//                   //             //           fontSize: 15,
-//                   //             //           color: Colors.black87,
-//                   //             //         ),
-//                   //             //       ),
-//                   //             //     ),
-//                   //             //   ],
-//                   //             // ),
-//                   //           ],
-//                   //         ),
-
-//                   //         // Button(
-//                   //         //   text: 'Add to cart',
-//                   //         //   color: Colors.green,
-//                   //         //   textcolor: Colors.white,
-//                   //         // ),
-//                   //       ],
-//                   //     ),
-//                   //   ),
-//                   // ),
-//                 ],
-                
-//               ),
-//             ),
-//           ),
-//         ),
-//       ),
-//     );
-// }

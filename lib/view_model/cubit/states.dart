@@ -82,6 +82,17 @@ class CastMoveSuccessState extends MovesStates {}
  ///// CastMoveErrorState
 class CastMoveErrorState extends MovesStates {}
 
+ /////  FavoriteMoveLogingState
+class FavoriteMovesLogingState extends MovesStates {}
+
+ ///// FavoriteMoveSuccessState
+
+class FavoriteMovesSuccessState extends MovesStates {}
+
+ ///// FavoriteMovesErrorState
+class FavoriteMovesErrorState extends MovesStates {}
+
+
 class BottomStateState extends MovesStates {}
 
 

@@ -1,41 +1,4 @@
-// class MoveDetails {
-//   MoveDetails({
-//     required this.id,
-//     required this.originalTitle,
-//     required this.overview,
-//     required this.posterPath,
-//     required this.title,
-//     required this.vote_average,
-//   });
 
-//   late final int id;
-//   late final String originalTitle;
-//   late final String overview;
-//   late final String posterPath;
-//   late final String title;
-//   late final double vote_average;
-//   MoveDetails.fromJson(Map<String, dynamic> json) {
-//     id = json['id'];
-//     originalTitle = json['original_title'];
-//     overview = json['overview'];
-//     posterPath = json['poster_path'];
-//     title = json['title'];
-//     vote_average = json['vote_average'];
-
-    
-//   }
-
-//   Map<String, dynamic> toJson() {
-//     final _data = <String, dynamic>{};
-//     _data['id'] = id;
-//     _data['original_title'] = originalTitle;
-//     _data['overview'] = overview;
-//     _data['poster_path'] = posterPath;
-//     _data['title'] = title;
-//     _data['vote_average']=vote_average;
-//     return _data;
-//   }
-// }
 
 class MoveDetails {
   MoveDetails({
